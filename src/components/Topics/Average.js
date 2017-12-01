@@ -16,15 +16,12 @@ export default class Average extends Component {
     }
 
     findAverage(userInput) {
-
             var nums = this.state.numbers;
-            var average = '';
             var numNums = nums.split(',').map(Number)
-
-            var total = numNums.map((e) => {
-                e++
+            var total = numNums.reduce((total, num) => {
+                return total + num;
             }) 
-            average = numNums
+            var average = total / numNums.length
             this.setState({ average: average})
     }
 
