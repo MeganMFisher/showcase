@@ -31,10 +31,10 @@ export default class SortNumbers extends Component {
     return (
     <div className="puzzleBox filterStringPB">
      <h4> Sort Numbers </h4>
-     <span className='puzzleText'>Numbers: { JSON.stringify(this.state.numbers, null, 10) }</span>
+     <span className='puzzleText'>Numbers: {this.state.numbers}</span>
      <input className='inputLine' onChange={ (e) => this.handleChange(e.target.value) } ></input>
      <button className='confirmationButton' onClick={ (e) => this.filteredNumbers(this.state.userInput) }> Sort </button>
-     <span className='resultsBox filterStringRB'> Filtered Numbers: { JSON.stringify(this.state.filteredNumbers, null, 10) } </span>
+     <span className='resultsBox filterStringRB'> Sorted Numbers: { JSON.stringify(this.state.filteredNumbers, null, 10) } </span>
     </div>
     )
   }

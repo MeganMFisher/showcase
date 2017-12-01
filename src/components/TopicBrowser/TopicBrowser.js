@@ -7,6 +7,7 @@ import Palindrome from '../Topics/Palindrome'
 import Sum from '../Topics/Sum'
 import SortNumbers from '../Topics/SortNumbers'
 import Average from '../Topics/Average'
+import SmallestNum from '../Topics/SmallestNum'
 
 class TopicBrowser extends Component {
   render() {
@@ -19,6 +20,7 @@ class TopicBrowser extends Component {
         <Sum />
         <SortNumbers />
         <Average />
+        <SmallestNum />
       </div>
     )
   }
