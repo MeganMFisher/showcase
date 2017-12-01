@@ -1,43 +1,42 @@
 import React, { Component } from 'react';
 
-export default class Startswith extends Component {
+export default class Endswith extends Component {
     constructor() {
-        super()
+        super() 
 
         this.state = {
-            words: [], 
-            startsWithWords: []
+            words: [],
+            endsWithList: []
         }
     }
 
     handleChange(e) {
-        this.setState({words: e})
+        this.setState({ words: e })
     }
 
-    startWith() {
+    endsWith() {
         var list = [];
         this.state.words.split(',').map(e => {
-            if(e.toLowerCase().startsWith("sh")) {
+            if(e.toLowerCase().endsWith('s')) {
                 list.push(e)
             }
         })
         this.setState({
-            startsWithWords: list,
+            endsWithList: list,
             words: []
         })
-
     }
+
 
     render() {
         return (
             <div className='puzzleBox filterStringPB'>
-                <h4>Starts with 'sh'</h4>
+                <h4>Ends with 's'</h4>
                 <span className='puzzleText'>Word List: { this.state.words }</span>
                 <input className='inputLine' onChange={ e => this.handleChange(e.target.value) }/>
-                <button className='confirmationButton' onClick={ e => this.startWith() }>Find</button>
-                <span className='resultsBox filterStringRB'>'sh' Word List: { this.state.startsWithWords }</span>
+                <button className='confirmationButton' onClick={ e => this.endsWith() }>Find</button>
+                <span className='resultsBox filterStringRB'>'s' Word List: { this.state.endsWithList }</span>
             </div>
         )
     }
-
 }

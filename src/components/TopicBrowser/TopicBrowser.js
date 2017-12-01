@@ -10,6 +10,7 @@ import Average from '../Topics/Average'
 import SmallestNum from '../Topics/SmallestNum'
 import LargestNum from '../Topics/LargestNum'
 import Startswith from '../Topics/Startswith'
+import Endswith from '../Topics/Endswith'
 
 class TopicBrowser extends Component {
   render() {
@@ -25,6 +26,7 @@ class TopicBrowser extends Component {
         <SmallestNum />
         <LargestNum />
         <Startswith />
+        <Endswith />
       </div>
     )
   }
