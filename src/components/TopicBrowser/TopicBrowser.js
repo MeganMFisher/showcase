@@ -6,6 +6,7 @@ import FilterString from '../Topics/FilterString'
 import Palindrome from '../Topics/Palindrome'
 import Sum from '../Topics/Sum'
 import SortNumbers from '../Topics/SortNumbers'
+import Average from '../Topics/Average'
 
 class TopicBrowser extends Component {
   render() {
@@ -17,6 +18,7 @@ class TopicBrowser extends Component {
         <Palindrome />
         <Sum />
         <SortNumbers />
+        <Average />
       </div>
     )
   }

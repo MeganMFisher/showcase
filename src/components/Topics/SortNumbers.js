@@ -18,17 +18,12 @@ export default class SortNumbers extends Component {
     filteredNumbers(userInput) {
         var nums = this.state.numbers;
         var filteredNumbers = []
-
         var numNums = nums.split(',').map(Number)
-
         var sortNums = numNums.sort(function(a, b) {
             return a - b
         })
-
         filteredNumbers = sortNums
-
-        this.setState({ filteredNumbers: filteredNumbers})
-     
+        this.setState({ filteredNumbers: filteredNumbers})    
     }
 
 
