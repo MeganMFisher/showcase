@@ -16,7 +16,7 @@ export default class SmallestNum extends Component {
 
     findSmallest() {
         var nums = this.state.numbers.split(',').map(Number)
-        var small = Math.min.apply(null, nums)
+        var small = Math.min(...nums)
         this.setState({smallest: small})
 
     }
@@ -28,7 +28,7 @@ export default class SmallestNum extends Component {
                 <span className='puzzleText'>Numbers: {this.state.numbers}</span>
                 <input className='inputLine' onChange={ e => this.handleChange(e.target.value)}/>
                 <button className='confirmationButton' onClick={e => this.findSmallest()}>Find</button>
-                <span className='resultsBox filterStringRB'>Smallest Number: {this.state.smallest}</span>
+                <span className='resultsBox filterStringRB'>Smallest Number: { this.state.smallest }</span>
             </div>
         )
     }

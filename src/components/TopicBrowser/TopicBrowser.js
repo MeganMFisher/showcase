@@ -8,6 +8,8 @@ import Sum from '../Topics/Sum'
 import SortNumbers from '../Topics/SortNumbers'
 import Average from '../Topics/Average'
 import SmallestNum from '../Topics/SmallestNum'
+import LargestNum from '../Topics/LargestNum'
+import Startswith from '../Topics/Startswith'
 
 class TopicBrowser extends Component {
   render() {
@@ -21,6 +23,8 @@ class TopicBrowser extends Component {
         <SortNumbers />
         <Average />
         <SmallestNum />
+        <LargestNum />
+        <Startswith />
       </div>
     )
   }
